@@ -3244,7 +3244,7 @@ static int (*const svm_exit_handlers[])(struct kvm_vcpu *vcpu) = {
 	[SVM_EXIT_AVIC_INCOMPLETE_IPI]		= avic_incomplete_ipi_interception,
 	[SVM_EXIT_AVIC_UNACCELERATED_ACCESS]	= avic_unaccelerated_access_interception,
 	[SVM_EXIT_VMGEXIT]			= sev_handle_vmgexit,
-	[SVM_EXIT_RDTSC]			= handle_rdtsc_interception,
+	[SVM_EXIT_RDTSC]			= handle_rdtsc_interception, // this was added
 };
 
 static void dump_vmcb(struct kvm_vcpu *vcpu)
