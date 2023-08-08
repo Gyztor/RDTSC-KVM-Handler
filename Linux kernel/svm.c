@@ -3169,7 +3169,7 @@ static int handle_rdtsc_interception(struct kvm_vcpu *vcpu)
 	vcpu->arch.regs[VCPU_REGS_RAX] = rdtsc_fake & -1u;
 		vcpu->arch.regs[VCPU_REGS_RDX] = (rdtsc_fake >> 32) & -1u;
 
-		return skip_emulated_instruction(vcpu);
+		return svm_skip_emulated_instruction(vcpu);
 }
 
 static int (*const svm_exit_handlers[])(struct kvm_vcpu *vcpu) = {
